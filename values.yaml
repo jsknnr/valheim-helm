@@ -26,6 +26,7 @@ valheimServer:
   updateCron: "*/15 * * * *"
   restartCron: "0 5 * * *"
   timezone: UTC
+  additionalArgs: ""
 
 persistence:
   config:

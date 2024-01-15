@@ -53,9 +53,10 @@ spec:
           value: {{ .Values.valheimServer.restartCron | quote }}
         - name: UPDATE_CRON
           value: {{ .Values.valheimServer.updateCron | quote }}
-        - name: SERVER_ARGS
-          value: "-crossplay"
-
+        {{- if ne .Values.valheimServer.additionalArgs "" }}
+        - name: SERVER_ARGS {{ .Values.volumes.storageClassName }}
+          value: {{ .Values.valheimServer.additionalArgs }}
+        {{- end }}
         ports:
         - name: valheim-1
           containerPort: {{ .Values.valheimServer.serverPort | int }}

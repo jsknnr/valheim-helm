@@ -54,7 +54,7 @@ spec:
         - name: UPDATE_CRON
           value: {{ .Values.valheimServer.updateCron | quote }}
         {{- if ne .Values.valheimServer.additionalArgs "" }}
-        - name: SERVER_ARGS {{ .Values.volumes.storageClassName }}
+        - name: SERVER_ARGS
           value: {{ .Values.valheimServer.additionalArgs }}
         {{- end }}
         ports:

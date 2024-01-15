@@ -73,8 +73,4 @@ spec:
       volumes:
       - name: config
         persistentVolumeClaim:
-{{- if eq .Values.persistence.claimName "" }}
           claimName: "{{ .Chart.Name }}-config"
-{{- else }}
-          claimName: {{ .Values.persistence.claimName }}
-{{- end }}

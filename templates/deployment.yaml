@@ -33,10 +33,7 @@ spec:
         - name: WORLD_NAME
           value: {{ .Values.valheimServer.worldName | quote }}
         - name: SERVER_PASS
-          valueFrom:
-            secretKeyRef:
-              name: serversecret
-              key: password
+          value: {{ .Values.valheimServer.serverPass | quote }}
         - name: SERVER_PUBLIC
           value: {{ .Values.valheimServer.serverPublic | quote }}
         - name: UPDATE_INTERVAL

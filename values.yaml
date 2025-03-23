@@ -15,6 +15,7 @@ resources:
 valheimServer:
   serverName: Fishy Valheim Server
   serverPort: 2456
+  serverPass: password
   worldName: Valheim World
   serverPublic: 1
   updateInterval: 10800 # every 3 hours
